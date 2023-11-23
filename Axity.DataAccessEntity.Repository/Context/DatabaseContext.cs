@@ -25,7 +25,7 @@ namespace Axity.DataAccessEntity.Entities.Context
         /// Initializes a new instance of the <see cref="DatabaseContext"/> class.
         /// </summary>
         /// <param name="options">Connection Options.</param>
-        public DatabaseContext(DbContextOptions<DatabaseContext> options)
+        public DatabaseContext(DbContextOptions options)
             : base(options)
         {
         }

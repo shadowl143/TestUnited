@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Axity.DataAccessEntity.Resources\Axity.DataAccessEntity.Resources.csproj" />
     <ProjectReference Include="..\Axity.DataAccessEntity.Services\Axity.DataAccessEntity.Services.csproj" />
   </ItemGroup>
 

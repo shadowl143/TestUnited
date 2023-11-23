@@ -1,11 +1,12 @@
-﻿using Axity.DataAccessEntity.Dtos.User;
-using Axity.DataAccessEntity.Facade.Interface;
-using Axity.DataAccessEntity.Services.Interface;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
+﻿
 namespace Axity.DataAccessEntity.Facade.User
 {
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using Axity.DataAccessEntity.Dtos.User;
+    using Axity.DataAccessEntity.Facade.Interface;
+    using Axity.DataAccessEntity.Services.Interface;
+
     public class UserFacade : ICatalogFacade<UserDto>
     {
         private readonly ICatalogService<UserDto> modelService;
@@ -15,9 +16,9 @@ namespace Axity.DataAccessEntity.Facade.User
             this.modelService = modelService;
         }
 
-        public Task Create(UserDto model)
+        public async Task Create(UserDto model)
         {
-            throw new System.NotImplementedException();
+            await this.modelService.Create(model);
         }
 
         public Task Delete(UserDto model)

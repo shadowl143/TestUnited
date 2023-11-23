@@ -31,9 +31,4 @@
     <ProjectReference Include="..\..\Axity.DataAccessEntity.Services\Axity.DataAccessEntity.Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Facade\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

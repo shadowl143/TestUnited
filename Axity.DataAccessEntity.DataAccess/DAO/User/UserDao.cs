@@ -1,13 +1,10 @@
 ﻿namespace Axity.DataAccessEntity.DataAccess.DAO.User
 {
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
     using Axity.DataAccessEntity.DataAccess.DAO.Interface;
-    using Axity.DataAccessEntity.DataAccess.Util;
     using Axity.DataAccessEntity.Entities.Context;
     using Axity.DataAccessEntity.Entities.Model.User;
-    using Microsoft.EntityFrameworkCore;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
 
     public class UserDao : ICatalogDao<UserModel>
     {
@@ -18,9 +15,10 @@
             this.databaseContext = databaseContext;
         }
 
-        public Task Create(UserModel model)
+        public async Task Create(UserModel model)
         {
-            throw new System.NotImplementedException();
+            this.databaseContext.Users.Add(model);
+            await ((DatabaseContext)this.databaseContext).SaveChangesAsync();
         }
 
         public Task Delete(UserModel model)
