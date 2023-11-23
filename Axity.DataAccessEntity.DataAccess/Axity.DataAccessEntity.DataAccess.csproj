@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <CodeAnalysisRuleSet>$(SolutionDir)\StyleCop\StyleCopeRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\StyleCop\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Axity.DataAccessEntity.Repository\Axity.DataAccessEntity.Entities.csproj" />
+    <ProjectReference Include="..\Axity.DataAccessEntity.Resources\Axity.DataAccessEntity.Resources.csproj" />
+  </ItemGroup>
+
+</Project>
